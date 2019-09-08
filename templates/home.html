@@ -1,0 +1,461 @@
+
+{% extends 'base.html' %}
+  {%load static %}
+
+{% block head %}
+    {{block.super}}
+    <link href="{% static 'vendors/rs-plugin/css/settings.css' %}" rel="stylesheet">
+    <link href="{% static 'vendors/magnific/magnific-popup.css' %}" rel="stylesheet">
+{% endblock head %}
+
+{% block banner %}
+    {% include 'assets/banner.html'  %}
+{% endblock banner %}
+
+{% block content %}
+<!--rv-slider-->
+
+
+<!--experiance-area-->
+<section class="row experience-area">
+   <div class="container">
+       <div class="row">
+           <div class="col-sm-5 worker-image">
+               <img src="{% static 'images/expreence/1.jpg' %}" alt="">
+           </div>
+           <div class="col-sm-7 experience-info">
+              <div class="content">
+                  <h2>Более 15 лет в индустрии</h2> 
+                  <p>Lorem ipsum dolor sit amet, cons ectetur elit. Vestibulum nec odios Suspe ndisse cursus mal suada faci lisis. Lorem ipsum dolor sit ametion consectetur elit. Vesti bulum nec.</p>  
+              </div>
+              <ul class="content-list">
+                  <li>Профессиональный подход</li>
+                  <li>Индивидуальный дизайн</li>
+                  <li>Качественные материалы</li>
+                  <li>Современное оборудование</li>
+                  <li>Проверенные технологии производства</li>
+              </ul>
+              <div class="content-image">
+              <img src="{% static 'images/expreence/2.jpg' %}  " alt="">
+              </div>
+               
+           </div>
+       </div>
+   </div>
+</section>
+
+
+<!--we-do-->
+<section class="row sectpad we-do-section">
+    <div class="container">
+        <div class="row m0 section_header color">
+           <h2>Что мы выполняем</h2> 
+        </div>
+        <div class="we-do-slider">
+            <div class="we-sliders">
+                <div class="item">
+                    <div class="post-image">
+                        <img src="{% static 'images/we-do/toys.jpg' %}"  alt="">
+                    </div>
+                    <a href="#"><h4>Деревянная игрушка</h4></a>
+                    <p>Деревянные игрушки и поделки </p>
+                </div>
+                <div class="item">
+                    <div class="post-image">
+                        <img src="{% static 'images/we-do/souvenir.jpg' %}"  alt="">
+                    </div>
+                    <a href="#"><h4>Сувениры и подарки</h4></a>
+                    <p>Сувенирная подвеска на цепочке</p>
+                </div>
+                <div class="item">
+                    <div class="post-image">
+                        <img src="{% static 'images/we-do/furniture.jpg' %}"  alt="">
+                    </div>
+                    <a href="#"><h4>Домашняя мебель</h4></a>
+                    <p>Столы, стулья, кровати, шкафы и тумбы с резными узорами. Комплекты барной и ресторанной мебели. Столы с эпоксидной смолой</p>
+                </div>
+                <div class="item">
+                    <div class="post-image">
+                        <img src="{% static 'images/we-do/outdoor_furniture.jpg' %}"  alt="">
+                    </div>
+                    <a href="#"><h4>Садовая мебель</h4></a>
+                    <p>Беседки, шезлонги</p>
+                </div>
+                <div class="item">
+                    <div class="post-image">
+                        <img src="{% static 'images/we-do/ladder.jpg' %}"  alt="">
+                    </div>
+                    <a href="#"><h4>Лестницы</h4></a>
+                    <p>Лестницы и входные группы с уникальной деревянной резьбой    </p>
+                </div>
+                <div class="item">
+                    <div class="post-image">
+                        <img src="{% static 'images/we-do/restoration.jpg' %}"  alt="">
+                    </div>
+                    <a href="#"><h4>Реставрация</h4></a>
+                    <p>Реставрационные работы</p>
+                </div>
+                <div class="item">
+                    <div class="post-image">
+                        <img src="{% static 'images/we-do/ivory.jpg' %}"  alt="">
+                    </div>
+                    <a href="#"><h4>Работы по кости</h4></a>
+                    <p><b>Статуэтки и композиции</b></p>
+                </div>
+                <div class="item">
+                    <div class="post-image">
+                        <img src="{% static 'images/we-do/other.jpg' %}"  alt="">
+                    </div>
+                    <a href="#"><h4>Другое</h4></a>
+                    <p><b>Мы всегда открыты для новых заказов</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects -->
+<section class="row latest_projects sectpad projects-1">
+    <div class="container">
+        <div class="row m0 section_header">
+            <h2>Последние выполненные проекты</h2>
+        </div>
+        <div class="row m0 filter_row">
+            <ul class="nav project_filter" id="project_filter2">
+                <li class="active" data-filter="*">all</li>
+                <li data-filter=".indoor">indoor furniture</li>
+                <li data-filter=".renovation">renovation of house</li>
+                <li data-filter=".hardwood">hardwood flooring</li>
+                <li data-filter=".wood_supply">wood supply</li>
+                <li data-filter=".manufacturing">furniture manufacturing</li>
+                <li data-filter=".repairing">repairing</li>
+            </ul>
+        </div>
+        <div class="projects2 popup-gallery" id="projects">
+            <div class="grid-sizer"></div>
+            <div class="col-sm-6 col-xs-6 project indoor wood_supply">
+                <div class="project-img">
+                    <img src="images/latest-project/1.jpg" alt="">
+                    <div class="project-text">
+                        <ul class="list-unstyled">
+                            <li><a href="projects-details.html"><i class="icon icon-Linked"></i></a></li>
+                            <li><a href="images/latest-project/1.jpg" data-source="projects-details.html" title="KITCHKEN RENOVATION" data-desc="Wood Work of Rack" class="popup"><i class="icon icon-Search"></i></a></li>
+                        </ul>
+                        <div class="row m0">
+                            <a href="projects-details.html"><h3>Kitchken renovation</h3></a>
+                            <p>Wood Work of Racks</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 col-xs-6 project indoor hardwood renovation renovation">
+                <div class="project-img">
+                    <img src="images/latest-project/2.jpg" alt="">
+                    <div class="project-text">
+                        <ul class="list-unstyled">
+                            <li><a href="projects-details.html"><i class="icon icon-Linked"></i></a></li>
+                            <li><a href="images/latest-project/2.jpg" data-source="projects-details.html" title="KITCHKEN RENOVATION" data-desc="Wood Work of Rack" class="popup"><i class="icon icon-Search"></i></a></li>
+                        </ul>
+                        <div class="row m0">
+                            <a href="projects-details.html"><h3>Kitchken renovation</h3></a>
+                            <p>Wood Work of Racks</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 col-xs-6 project indoor manufacturing">
+                <div class="project-img">
+                    <img src="images/latest-project/3.jpg" alt="">
+                    <div class="project-text">
+                        <ul class="list-unstyled">
+                            <li><a href="projects-details.html"><i class="icon icon-Linked"></i></a></li>
+                            <li><a href="images/latest-project/3.jpg" data-source="projects-details.html" title="KITCHKEN RENOVATION" data-desc="Wood Work of Rack" class="popup"><i class="icon icon-Search"></i></a></li>
+                        </ul>
+                        <div class="row m0">
+                            <a href="projects-details.html"><h3>Kitchken renovation</h3></a>
+                            <p>Wood Work of Racks</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 col-xs-6 project manufacturing repairing">
+                <div class="project-img">
+                    <img src="images/latest-project/4.jpg" alt="">
+                    <div class="project-text">
+                        <ul class="list-unstyled">
+                            <li><a href="projects-details.html"><i class="icon icon-Linked"></i></a></li>
+                            <li><a href="images/latest-project/4.jpg" data-source="projects-details.html" title="KITCHKEN RENOVATION" data-desc="Wood Work of Rack" class="popup"><i class="icon icon-Search"></i></a></li>
+                        </ul>
+                        <div class="row m0">
+                            <a href="projects-details.html"><h3>Kitchken renovation</h3></a>
+                            <p>Wood Work of Racks</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 col-xs-6 project repairing renovation">
+                <div class="project-img">
+                    <img src="images/latest-project/5.jpg" alt="">
+                    <div class="project-text">
+                        <ul class="list-unstyled">
+                            <li><a href="projects-details.html"><i class="icon icon-Linked"></i></a></li>
+                            <li><a href="images/latest-project/5.jpg" data-source="projects-details.html" title="KITCHKEN RENOVATION" data-desc="Wood Work of Rack" class="popup"><i class="icon icon-Search"></i></a></li>
+                        </ul>
+                        <div class="row m0">
+                            <a href="projects-details.html"><h3>Kitchken renovation</h3></a>
+                            <p>Wood Work of Racks</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xs-6 project indoor wood_supply">
+                <div class="project-img">
+                    <img src="images/latest-project/6.jpg" alt="">
+                    <div class="project-text">
+                        <ul class="list-unstyled">
+                            <li><a href="projects-details.html"><i class="icon icon-Linked"></i></a></li>
+                            <li><a href="images/latest-project/6.jpg" data-source="projects-details.html" title="KITCHKEN RENOVATION" data-desc="Wood Work of Rack" class="popup"><i class="icon icon-Search"></i></a></li>
+                        </ul>
+                        <div class="row m0">
+                            <a href="projects-details.html"><h3>Kitchken renovation</h3></a>
+                            <p>Wood Work of Racks</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--work-shop-->
+<section class="row fluid-work-area">
+    <div class="work-image">
+        <img src="images/workshop/work.jpg" alt="">
+    </div>
+    <div class="work-promo">
+        <div class="promo-content">
+            <h2>Welcome to Wood Workshop</h2>
+            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quae rat voluptatem. Ut enim ad minima.</p>
+            <h3>We are available for 24/7 for you requirements</h3>
+            <ul class="nav">
+                <li>Complete Savety Analysis</li>
+                <li>Complete Savety Analysis</li>
+                <li>Certified Company Since 2005</li>
+                <li>Certified Company Since 2005</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<!-- latest-news-area -->
+<section class="row sectpad latest-news-area">
+    <div class="container">
+        <div class="row m0 section_header">
+           <h2>Последние новости</h2> 
+        </div>
+        <div class="row latest-content">
+            <div class="col-sm-4 clo-xs-12 latest">
+                <div class="row m0 latest-image">
+                    <a href="blog-details.html"><img src="images/latest-news/1.jpg" alt=""></a>
+                    <div class="latest-info-date"><a href="#"><h3>14 <small>MAR</small></h3></a></div>
+                </div>
+                <div class="latest-news-text">
+                    <a href="blog.html">
+                        <h4>Wood Work Adds Value to Your Property</h4>
+                    </a>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusa nt ium dolor emque laudantium totam.</p>
+                    <div class="row m0 latest-meta">
+                        <a href="#"><i class="fa fa-user"></i>Anjori Meyami</a> <a class="read_more" href="single.html"><i class="fa fa-comments"></i> Comments: 6</a>
+                    </div>
+                </div>
+            </div>    
+            <div class="col-sm-4 clo-xs-12  latest">
+                <div class="row m0 latest-image">
+                    <a href="blog-details.html"><img src="images/latest-news/2.jpg" alt=""></a>
+                    <div class="latest-info-date"><a href="#"><h3>14 <small>MAR</small></h3></a></div>
+                </div>
+                <div class="latest-news-text">
+                    <a href="blog-details.html">
+                        <h4>Wood Work Adds Value to Your Property</h4>
+                    </a>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusa nt ium dolor emque laudantium totam.</p>
+                    <div class="row m0 latest-meta">
+                       <a href="#"><i class="fa fa-user"></i>Anjori Meyami</a> <a class="read_more" href="single.html"><i class="fa fa-comments"></i> Comments: 6</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 clo-xs-12 latest">
+                <div class="row m0 latest-image">
+                    <a href="blog-details.html"><img src="images/latest-news/3.jpg" alt=""></a>
+                    <div class="latest-info-date"><a href="#"><h3>14 <small>MAR</small></h3></a></div>
+                </div>
+                <div class="latest-news-text">
+                    <a href="blog.html">
+                        <h4>Wood Work Adds Value to Your Property</h4>
+                    </a>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusa nt ium dolor emque laudantium totam.</p>
+                    <div class="row m0 latest-meta">
+                        <a href="#"><i class="fa fa-user"></i>Anjori Meyami</a> <a class="read_more" href="single.html"><i class="fa fa-comments"></i> Comments: 6</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--testimonial-->
+<section class="row sectpad testimonial-area">
+   <div class="container">
+       <div class="row m0 section_header common">
+           <h2>What our client says</h2> 
+        </div>
+        <div class="testimonial-sliders">
+            <div class="item">
+                <div class="media testimonial">
+                    <div class="media-left">
+                        <a href="#">
+                            <img src="images/testimonial/1.jpg"  alt="">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incid idunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+                        <a href="#">-  John Michale</a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="media testimonial">
+                    <div class="media-left">
+                        <a href="#">
+                            <img src="images/testimonial/2.jpg"  alt="">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incid idunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+                        <a href="#">-  John Michale</a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="media testimonial">
+                    <div class="media-left">
+                        <a href="#">
+                            <img src="images/testimonial/3.jpg"  alt="">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incid idunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+                        <a href="#">-  John Michale</a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="media testimonial">
+                    <div class="media-left">
+                        <a href="#">
+                            <img src="images/testimonial/4.jpg"  alt="">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incid idunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+                        <a href="#">-  John Michale</a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="media testimonial">
+                    <div class="media-left">
+                        <a href="#">
+                            <img src="images/testimonial/5.jpg"  alt="">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incid idunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+                        <a href="#">-  John Michale</a>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="media testimonial">
+                    <div class="media-left">
+                        <a href="#">
+                            <img src="images/testimonial/6.jpg"  alt="">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incid idunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+                        <a href="#">-  John Michale</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </div>
+</section>
+<!-- clients -->
+<section class="row clients">
+    <div class="container">
+        <div class="row m0 section_header">
+            <h2>Наши клиенты</h2>
+        </div>
+        <div class="row clients-logos">
+            <div class="col-md-2 col-sm-3 col-xs-6 client">
+                <div class="row m0 inner-logo">
+                   <a href="#"><img src="images/clients-logo/1.png" alt=""></a>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-3 col-xs-6 client">
+                <div class="row m0 inner-logo">
+                   <a href="#"><img src="images/clients-logo/2.png" alt=""></a>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-3 col-xs-6 client">
+                <div class="row m0 inner-logo">
+                   <a href="#"><img src="images/clients-logo/3.png" alt=""></a>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-3 col-xs-6 client">
+                <div class="row m0 inner-logo">
+                   <a href="#"><img src="images/clients-logo/4.png" alt=""></a>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-3 col-xs-6 client">
+                <div class="row m0 inner-logo">
+                   <a href="blog-details.html"><img src="images/clients-logo/5.png" alt=""></a>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-3 col-xs-6 client">
+                <div class="row m0 inner-logo">
+                   <a href="blog-details.html"><img src="images/clients-logo/6.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--great-work-->
+ 
+{% endblock content %}
+{% block scripts %}
+{{block.super}}
+<!--RS-->	
+<script src="{% static 'vendors/rs-plugin/js/jquery.themepunch.tools.min.js' %}"></script> <!-- Revolution Slider Tools -->
+<script src="{% static 'vendors/rs-plugin/js/jquery.themepunch.revolution.min.js' %}"></script> <!-- Revolution Slider -->
+<script src="{% static 'vendors/rs-plugin/js/extensions/revolution.extension.actions.min.js' %}"></script>
+<script src="{% static 'vendors/rs-plugin/js/extensions/revolution.extension.carousel.min.js' %}"></script>
+<script src="{% static 'vendors/rs-plugin/js/extensions/revolution.extension.kenburn.min.js' %}"></script>
+<script src="{% static 'vendors/rs-plugin/js/extensions/revolution.extension.layeranimation.min.js' %}"></script>
+<script src="{% static 'vendors/rs-plugin/js/extensions/revolution.extension.migration.min.js' %}"></script>
+<script src="{% static 'vendors/rs-plugin/js/extensions/revolution.extension.navigation.min.js' %}"></script>
+<script src="{% static 'vendors/rs-plugin/js/extensions/revolution.extension.parallax.min.js' %}"></script>
+<script src="{% static 'vendors/rs-plugin/js/extensions/revolution.extension.slideanims.min.js' %}"></script>
+<script src="{% static 'vendors/rs-plugin/js/extensions/revolution.extension.video.min.js' %}"></script>
+
+<script src="{% static 'vendors/isotope/isotope.min.js' %}"></script>
+<script src="{% static 'vendors/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+<script src="{% static 'vendors/owlcarousel/owl.carousel.min.js' %}"></script>
+<script src="{% static 'vendors/magnific/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'js/theme.js' %}"></script>
+
+
+{% endblock scripts %}

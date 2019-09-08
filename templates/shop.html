@@ -1,0 +1,176 @@
+{% extends 'base.html' %}
+  {%load static %}
+
+
+
+{% block content %}
+<section class="row blog_content">
+    <div class="container">
+        <div class="row sectpad">
+            <div class="blog_section col-lg-8 shop-page-content">
+                <div class="row m0 section_header color">
+                    <h2>Товары</h2> 
+                </div> 
+                <br><br>
+                <div class="row">
+                    {% for item in object_list %}
+                        <div class="col-lg-4 col-md-4 single-shop-item">
+                        <img src= "{{item.thumbnail.url}}" alt="">
+                        <div class="meta">
+                        <a href="{{item.get_absolute_url}}">
+                            <h4>{{item.title}}</h4>
+                        </a>
+
+                            <span>Price: <b>${{item.price}}</b></span>
+                            <a href="{{item.get_add_to_cart_url}}">
+                                <div class="cart-button">
+                                    <p>Добавить в корзину</p>
+                                    <i class="fa fa-shopping-cart"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                
+
+                
+                
+                
+
+                <div class="row best-seller">
+                    <div class="row m0 section_header color">
+                        <h2>best Seller</h2> 
+                    </div>
+                </div>
+                <br><br>
+                
+                <div class="row">
+                    <!--Start single shop item-->
+
+                    <!--End single shop item-->
+                    <!--Start single shop item-->
+                    <div class="col-lg-4 col-md-4 single-shop-item">
+                        <img src="images/product-details/shop-item-2.jpg" alt="">
+                        <div class="meta">
+                            <h4>Battery screwdriver</h4>
+                            <div class="star-rating"> 
+                                <i class="fa fa-star" data-rating="1"></i>
+                                <i class="fa fa-star" data-rating="2"></i>
+                                <i class="fa fa-star" data-rating="3"></i>
+                                <i class="fa fa-star" data-rating="4"></i>
+                                <i class="fa fa-star-o" data-rating="5"></i>
+                                <input type="hidden" name="whatever" class="rating-value" value="3">
+                            </div>
+                            <span>Price: <b>$24.5</b></span>
+                            <a href="cart-page.html">
+                                <div class="cart-button">
+                                    <p>add to cart</p>
+                                    <i class="fa fa-shopping-cart"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!--End single shop item-->
+                    <!--Start single shop item-->
+                    <div class="col-lg-4 col-md-4 single-shop-item">
+                        <img src="images/product-details/shop-item-3.jpg" alt="">
+                        <div class="meta">
+                            <h4>Battery screwdriver</h4>
+                            <div class="star-rating"> 
+                                <i class="fa fa-star" data-rating="1"></i>
+                                <i class="fa fa-star" data-rating="2"></i>
+                                <i class="fa fa-star" data-rating="3"></i>
+                                <i class="fa fa-star" data-rating="4"></i>
+                                <i class="fa fa-star-o" data-rating="5"></i>
+                                <input type="hidden" name="whatever" class="rating-value" value="3">
+                            </div>
+                            <span>Price: <b>$24.5</b></span>
+                            <a href="cart-page.html">
+                                <div class="cart-button">
+                                    <p>add to cart</p>
+                                    <i class="fa fa-shopping-cart"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!--End single shop item-->
+                </div>  
+                
+            </div>
+            <div class="sidebar_section col-lg-4">
+                <div class="sidebar row m0">
+                    <div class="row widget widget-search">
+                        <div class="row widget-inner">
+                            <form action="#" class="search-form" method="get">
+                                <div class="input-group">
+                                    <input type="search" class="form-control" placeholder="Enter Search keywords">
+                                    <span class="input-group-addon">
+                                        <button type="submit"><i class="icon icon-Search"></i></button>
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
+                    </div> <!--Search-->
+                    <div class="row widget widget-categories">
+                        <h4 class="widget-title">Категории</h4>
+                        <div class="row widget-inner">
+                            <ul class="nav categories">
+                                <li><a href="#"><i class="fa fa-angle-right"></i>Interior Furniture Manfacturing</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>Reparing of Wooden Almerah</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>Hardwood Flooring</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>Renovaion of office furnitures</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>Make Quality Products</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>Renovation of Kitchen</a></li>
+                            </ul>
+                        </div>
+                    </div> <!--Categories-->
+                    <div class="row widget widget-popular-posts">
+                        <h4 class="widget-title">popular posts</h4>
+                        <div class="row widget-inner">
+                            <div class="media popular-post">
+                                <div class="media-left"><a href="single.html"><img src="images/blogs/post1.jpg" alt=""></a></div>
+                                <div class="media-body">
+                                    <h5 class="post-title"><a href="blog-details.html">Neque porro quisua mest qui dolorem.</a></h5>
+                                    <h5 class="post-date"><a href="blog-details.html">20 june</a></h5>                            
+                                </div>
+                            </div> <!--Popular Post-->
+                            <div class="media popular-post">
+                                <div class="media-left"><a href="blog-details.html"><img src="images/blogs/post2.jpg" alt=""></a></div>
+                                <div class="media-body">
+                                    <h5 class="post-title"><a href="blog-details.html">Neque porro quisua mest qui dolorem.</a></h5>
+                                    <h5 class="post-date"><a href="blog-details.html">20 june</a></h5>                            
+                                </div>
+                            </div> <!--Popular Post-->
+                            <div class="media popular-post">
+                                <div class="media-left"><a href="blog-details.html"><img src="images/blogs/post3.jpg" alt=""></a></div>
+                                <div class="media-body">
+                                    <h5 class="post-title"><a href="blog-details.html">Neque porro quisua mest qui dolorem.</a></h5>
+                                    <h5 class="post-date"><a href="blog-details.html">20 june</a></h5>                            
+                                </div>
+                            </div> <!--Popular Post-->
+                        </div>
+                    </div> <!--Popular Posts-->
+                    <div class="row widget text-widget-post">
+                        <h4 class="widget-title">Text Widget</h4>
+                        <div class="text-widegt widget-inner">
+                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusant ium dolore que laudantium, totam rem aperiam, eaque ipsa quae ab illo inve ntore veritatis et quasi arc</p>
+                        </div>
+                    </div> 
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}
+
+
+{% block scripts %}
+{{block.super}}
+<script src="{% static 'vendors/isotope/isotope.min.js' %}"></script>
+<script src="{% static 'vendors/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+<script src="{% static 'vendors/owlcarousel/owl.carousel.min.js' %}"></script>
+<script src="{% static 'js/theme.js' %}"></script>
+{% endblock scripts %}

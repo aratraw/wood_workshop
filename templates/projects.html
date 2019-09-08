@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+  {%load static %}
+
+
+
+{% block content %}
+
+<section class="row check-project sectpad">
+    <div class="container">
+        <div class="row m0 section_header color">
+            <h2>Checkout Our Projects</h2>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolore mque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dict eaque ipsa quae ab illo inventore veritatis et quasi architecto.</p>
+        </div>
+        
+    </div>
+</section>
+
+<!-- Projects -->
+<section class="row latest_projects sectpad projects-1">
+    <div class="container">
+        <div class="row m0 filter_row pro   jects-menu">
+            <ul class="nav project_filter" id="project_filter2">
+                <li class="active" data-filter="*">all</li>
+                <li data-filter=".indoor">indoor furniture</li>
+                <li data-filter=".renovation">renovation of house</li>
+                <li data-filter=".hardwood">hardwood flooring</li>
+                <li data-filter=".wood_supply">wood supply</li>
+                <li data-filter=".manufacturing">furniture manufacturing</li>
+                <li data-filter=".repairing">repairing</li>
+            </ul>
+        </div>
+        <div class="projects2 popup-gallery" id="projects">
+            <div class="grid-sizer"></div>
+            {%for item in object_list%}
+            <div class="col-sm-3 col-xs-6 project">
+                <div class="project-img">
+
+                    <img src= "{{item.thumbnail.url}}" alt="">
+                    <div class="project-text">
+                        <ul class="list-unstyled">
+                            <li><a href="{{item.get_absolute_url}}"><i class="icon icon-Linked"></i></a></li>
+                            {% comment %} <li><a href="images/project_1/1.jpg" data-source="projects-details.html" title="KITCHKEN RENOVATION" data-desc="Wood Work of Rack" class="popup"><i class="icon icon-Search"></i></a></li> {% endcomment %}
+                        </ul>
+                        <div class="row m0">
+                            <a href="{{item.get_absolute_url}}"><h3>{{item.title}}</h3></a>
+                            <p>{{item.short_description}}</p>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+            {%endfor%}
+
+
+
+ 
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<!--great-work-->
+<!--footer-->
+  
+
+{% endblock content %}
+
+
+{% block scripts %}
+{{block.super}}
+<script src="{% static 'vendors/isotope/isotope.min.js'" %}></script>
+<script src="{% static 'vendors/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+<script src="{% static 'vendors/owlcarousel/owl.carousel.min.js' %}"></script>
+<script src="{% static 'vendors/magnific/jquery.magnific-popup.min.js' %}"></script>
+
+
+{% endblock scripts %}
