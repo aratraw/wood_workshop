@@ -9,7 +9,7 @@ from .views import (
     home,
     ProjectsView,
     ProjectDetailView,
-    contacts, about, Shop, ShopDetail,
+    contacts, about, Shop, ShopDetail, CartView,
     add_to_cart
 )
 
@@ -23,7 +23,9 @@ urlpatterns = [
     path('projects/<slug>/', ProjectDetailView.as_view(), name="project-detail"),
     path('shop/', Shop.as_view(), name='shop'),
     path('shop/<slug>/', ShopDetail.as_view(), name="shop-detail"),
-    path('add-to-cart/<slug>', add_to_cart, name="add-to-cart")
+    path('add-to-cart/<slug>', add_to_cart, name="add-to-cart"),
+    path('cart/', CartView.as_view(), name="cart"),
+
 
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

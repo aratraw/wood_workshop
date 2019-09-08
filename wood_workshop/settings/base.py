@@ -22,13 +22,14 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'ckeditor',
     'ckeditor_uploader',
+    'crispy_forms',
 
 ]
+
+
 # allauth
 AUTHENTICATION_BACKENDS = (
-
     'django.contrib.auth.backends.ModelBackend',
-
     'allauth.account.auth_backends.AuthenticationBackend',
 
 )
@@ -92,3 +93,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # allauth
 SITE_ID = 1
+LOGIN_REDIRECT_URL = '/'
+# Crispy-forms
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
