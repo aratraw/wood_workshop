@@ -18,13 +18,13 @@ app_name = 'core'
 urlpatterns = [
     path('', home, name='home'),
     path('about/', about, name='about'),
-    path('contacts', contacts, name='contacts'),
+    path('contacts/', contacts, name='contacts'),
     path('projects/', ProjectsView.as_view(), name='projects'),
     path('projects/<slug>/', ProjectDetailView.as_view(), name="project-detail"),
     path('shop/', Shop.as_view(), name='shop'),
     path('shop/<slug>/', ShopDetail.as_view(), name="shop-detail"),
-    path('add-to-cart/<slug>', add_to_cart, name="add-to-cart"),
-    path('cart/', CartView.as_view(), name="cart"),
+    path('add-to-cart/<slug>/', add_to_cart, name="add-to-cart"),
+    path('cart/', CartView.as_view(), name="cartview"),
 
 
 ]

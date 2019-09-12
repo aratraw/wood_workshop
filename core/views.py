@@ -1,3 +1,7 @@
+from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.core.exceptions import ObjectDoesNotExist
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views.generic import DetailView, ListView, View
 from django.utils import timezone
@@ -39,15 +43,25 @@ class ShopDetail(DetailView):
     template_name = "shop-detail.html"
 
 
-class CartView(View):
+class CartView(LoginRequiredMixin, View):
     def get(self, *args, **kwargs):
-        return render(self.request, "cart.html")
+        try:
+            order = Order.objects.get(user=self.request.user, ordered=False)
+            context = {
+                'object': order
+            }
+            return render(self.request, "account/cart.html", context)
+        except ObjectDoesNotExist:
+            messages.error(self.request, "Нет заказов")
+            return redirect('/')
 
 
+@login_required
 def checkout(request):
     return render(request, "checkout.html")
 
 
+@login_required
 def add_to_cart(request, slug):
     if request.user.is_authenticated:
         item = get_object_or_404(ShopItem, slug=slug)
@@ -67,6 +81,7 @@ def add_to_cart(request, slug):
     return redirect("core:shop-detail", slug=slug)
 
 
+@login_required
 def remove_from_cart(request, slug):
     item = get_object_or_404(ShopItem, slug=slug)
     order_querry = Order.objects.filter(user=request.user, ordered=False)
